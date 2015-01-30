@@ -11,7 +11,7 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        echo "web server is running locally";
+        require_once("conroller/create-dbb.php);
         ?>
     </body>
 </html>
