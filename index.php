@@ -11,7 +11,7 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        require_once("conroller/create-dbb.php);
+        require_once(__DIR__ . "/conroller/create-dbb.php);
         ?>
     </body>
 </html>
