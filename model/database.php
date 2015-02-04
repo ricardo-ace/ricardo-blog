@@ -1,6 +1,6 @@
 <?php
-  $local = "localhost";
+  $host = "localhost";
   $username = "root";
-  $pasword = "root";
+  $password = "root";
   $database = "blog_db";
 

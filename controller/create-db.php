@@ -4,18 +4,22 @@
 require_once(__DIR__ . "/../model/database.php");
 
 //this is to connect to our server
-$connection = new newsqli($host, username, password)
+$connection = new mysqli($host, $username, $password);
 
 //   this is to see if my code that is above works like if their is an error
 if($connection->connect_error) {
     die("Error: " . $connection->connect_error);
-
+}
   $exists = $connection->select_db($database);
     
   if(!$exists){
-      echo "Database does not exist";
-  }
+    $query = $connection->query("CREATE DATABASE $database");
     
+    if($query){
+       echo "successfully created database" . $database;
+    }
+     }
+
 $connection->close();
 
 
