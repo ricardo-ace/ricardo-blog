@@ -1,7 +1,7 @@
 <?php
 
 //this is to connect the varaibles i have in my database file to this folder
-require_once(__DIR__ . "/../model/database.php");
+require_once(__DIR__ . "/../model/config.php");
 
 //this is to connect to our server
 $connection = new mysqli($host, $username, $password);
