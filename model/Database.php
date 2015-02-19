@@ -1,7 +1,7 @@
 <?php
 
 class Database {
-
+    //these are variables
     private $connection;
     private $host;
     private $username;
@@ -35,16 +35,16 @@ class Database {
         }
         echo"";
     }
-
+    //this is to open the connection 
     public function openConnection() {
-        $this->coonnection = new mysqli($this->host, $this->username, $this->password, $this->database);
+        $this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
 
         //   this is to see if my code that is above works like if their is an error
         if ($this->connection->connect_error) {
-            die("<p>Error: " . $connection->connect_error) . "</p>";
+            die("<p>Error: " . $this->connection->connect_error) . "</p>";
         }
     }
-
+   //this is to  colse the connection 
     public function closeConnection() {
         if (isset($this->connection)) {
             $this->connection->close();
@@ -52,12 +52,12 @@ class Database {
     }
 
     public function query($string) {
-        $this->oenConnection();
+        $this->openConnection();
 
         $query = $this->connection->query($string);
 
         if (!$query) {
-            $thiss->error = $this->connection->error;
+            $this->error = $this->connection->error;
         }
         $this->closeConnection();
 
