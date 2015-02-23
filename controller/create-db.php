@@ -3,7 +3,7 @@
 //this is to connect the varaibles i have in my database file to this folder
 require_once(__DIR__ . "/../model/config.php");
 
-
+//this is to create the post
 $query = $_SESSION["connection"]->query("CREATE TABLE posts ("
         . "id int(11) NOT NULL AUTO_INCREMENT,"
         . "title varchar(255) NOT NULL,"
@@ -16,8 +16,21 @@ if ($query) {
     echo"<p>" . $_SESSION["connection"]->error . "</p>";
 }
 
-
-
+ $query = $_SESSION["connection"]->query("CREATE TABLE users("
+         . "id int(11) NOT NULL AUTO_INCREMENT,"
+         . "username varchar(30)NOT NULL,"
+         . "email varshar(50) NOT NULL,"
+         . "password char(128)NOT NULL,"
+         . "salt char(128 NOT NULL)"
+         . "primary key(id))");
+ 
+ if($query){
+     echo "<p> succesfull created table:users </p>";
+     
+ }
+else{
+    echo"<p>" . $_SESSION["connection"]->error . "</p>";
+}
 
 
         

@@ -17,3 +17,6 @@ $path = "/ricardo-blog/";
         //these are like regular variables but there different because of how we access them
         $_SESSION["connection"] = $connection;
   }
+  
+  //its allowing us to regfister on the website
+  
