@@ -1,8 +1,11 @@
 <?php
 //it is requiring a file 
  require_once(__DIR__."/database.php");
+ 
   //this is to start a session 
   session_start();
+  session_regenerate_id(true);
+  
 $path = "/ricardo-blog/";
 
   $host = "localhost";

@@ -6,7 +6,7 @@ require_once(__DIR__ . "/../model/config.php")
 <h1>Register</h1>
 
 <!--//we want send this info to file-->
-<form method="form" actiom="<?php echo $path . "controller/create-user.php";?>">
+<form method="form" action="<?php echo $path . "controller/create-user.php";?>">
     <div>
         <label for="email">Email:</label>
         <input type="text" name="email"  />

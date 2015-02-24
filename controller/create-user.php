@@ -12,7 +12,7 @@ require_once(__DIR__ . "/../model/config.php");
  // we are encrypting ouur password
   $hashedPassword = crypt($password, $salt);
   
-  $query = $_SESSION["coonnection"]->query("INSERT INTO users SET " 
+  $query = $_SESSION["connection"]->query("INSERT INTO users SET " 
           ."email = '$email',"
           ."username = '$username',"
           ."password = '$hashedPassword',"
