@@ -1,4 +1,15 @@
 <?php
+    //prottecting the controllers and views 
+    require_once(__DIR__ . "/../model/config.php");
+    require_once(__DIR__ . "/../controller/login-verify.php");
+    //killing the program  if not logged in 
+    if(!authenticateUser()){
+        header("location: " . $path . "index.php");
+        die();
+    }
+
+?>
+
 
 //this is to connect the varaibles i have in my database file to this folder
 require_once(__DIR__ . "/../model/config.php");

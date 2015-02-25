@@ -1,5 +1,12 @@
 <?php
-require_once(__DIR__ . "/../model/config.php")
+   //protecting the controler and views
+    require_once(__DIR__ . "/../model/config.php");
+    require_once(__DIR__ . "/../controller/login-verify.php");
+    //killing the program  if not logged in 
+    if(!authenticateUser()){
+        header("location: " . $path . "index.php");
+        die();
+    }
 
 ?>
 
